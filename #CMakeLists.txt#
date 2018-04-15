@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 2.8) project(forum CXX) if(WIN32)     set(SFML_ROOT "$ENV{PROGRAMFILES(x86)}/SFML") # You will probably have to change this endif(WIN32) set(CMAKE_BUILD_TYPE Release) #If you have problems check if you have SFML debug libraries or release libraries find_package(SFML 2.1 COMPONENTS system window graphics REQUIRED) include_directories(${SFML_INCLUDE_DIR} ${PROJECT_SOURCE_DIR}) set(SOURCE_FILES main.cpp   ) set(HEADER_FILES            ) add_executable(forum ${SOURCE_FILES} ${HEADER_FILES}) target_link_libraries(forum ${SFML_LIBRARIES})cmake_minimum_required(VERSION 3.5)
+
+
+  project(untitled)
+
+set(CMAKE_CXX_STANDARD 11)
+
+add_executable(untitled main.cpp)
